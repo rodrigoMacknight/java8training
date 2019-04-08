@@ -5,7 +5,7 @@ import java.util.Collections;
 import java.util.Comparator;
 import java.util.List;
 
-public class Java8Testes {
+public class Java8LambdaTests {
 	
 	public static void main(String args[]) {
 		List<String> names1 = new ArrayList<String>();	
@@ -22,7 +22,7 @@ public class Java8Testes {
 		names2.add("brunao");
 		
 		
-		Java8Testes testes = new Java8Testes();
+		Java8LambdaTests testes = new Java8LambdaTests();
 		System.out.println("java7 comparator:");
 		testes.java7Sort(names1);
 		System.out.println(names1);
