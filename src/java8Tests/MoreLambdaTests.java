@@ -19,6 +19,14 @@ public class MoreLambdaTests {
 		System.out.println("Addition: " + mlt.operate(10,5,addition));
 		System.out.println("subtraction: " + mlt.operate(10,5,subtraction));
 		System.out.println("doublemultiplication: " +mlt.operate(10,5,doubleMultiplication));
+	
+		SayMessage greeting1 = (message) -> {
+			System.out.println("Lambda says: " +  message);
+		};
+		SayMessage greeting2 = (message) ->  System.out.println("OneLiner Lambda Says: " + message);
+		
+		greeting1.sayMessage("eae mano");
+		greeting2.sayMessage("blz?");
 	}
 	
 	private int operate(int a, int b, MathOperation operationHolder) {
@@ -28,5 +36,9 @@ public class MoreLambdaTests {
 	//lambda uses a single method interface
 	interface MathOperation{
 		int operation(int a, int b);
+	}
+	
+	interface SayMessage{
+		void sayMessage(String message);
 	}
 }
